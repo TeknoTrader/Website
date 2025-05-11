@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Nicola Chimenti{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Automazione. Analisi. Risultati.</h1>
+    <p>Sono Nicola Chimenti, laureando in Gestione d’Impresa (indirizzo Economia Digitale) e sviluppatore specializzato in MQL4 e Python. Aiuto privati e aziende a trasformare dati finanziari in decisioni strategiche e automatizzare strategie di trading per migliorare la redditività.</p>
+</section>
+
+<section class="focus">
+    <h2>Come posso aiutarti</h2>
+    <ul>
+        <li><strong>Analisi finanziarie personalizzate</strong>: per chi vuole capire cosa sta davvero succedendo nei propri investimenti o nell’andamento dell’azienda.</li>
+        <li><strong>Sviluppo di Expert Advisor e Script MQL4</strong>: per chi ha una strategia di trading e vuole automatizzarla, testarla o migliorarla.</li>
+        <li><strong>Dashboard e strumenti analitici</strong>: creo interfacce su misura per visualizzare i dati in modo chiaro, anche in ambito aziendale.</li>
+    </ul>
+</section>
+
+<section class="why-me">
+    <h2>Perché lavorare con me</h2>
+    <p>Non mi limito a scrivere codice o generare grafici: cerco di capire prima di tutto l’obiettivo. Che tu sia un trader che ha bisogno di un bot preciso e affidabile, oppure un imprenditore che vuole capire dove stanno andando i numeri, ti offro soluzioni su misura. Ogni progetto che prendo in mano è una sfida da risolvere con competenza e attenzione.</p>
+</section>
+
+<section class="portfolio-preview">
+    <h2>Dai un’occhiata ai miei lavori</h2>
+    <p>Nel mio <a href="{{ url_for('portfolio') }}">portfolio</a> puoi vedere progetti concreti che ho sviluppato: strategie automatizzate, strumenti di analisi e altro ancora.</p>
+</section>
+
+<section class="cta">
+    <h2>Hai un progetto? Parliamone.</h2>
+    <p>Scrivimi e vediamo come posso aiutarti a costruire la soluzione giusta per te.</p>
+    <a href="{{ url_for('contact') }}" class="contact-button">Contattami</a>
+</section>
+{% endblock %}

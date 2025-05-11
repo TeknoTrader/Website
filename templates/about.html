@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi sono - [Il Tuo Nome]</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Chi sono</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('services') }}">Servizi</a>
+            <a href="{{ url_for('portfolio') }}">Portfolio</a>
+            <a href="{{ url_for('contact') }}">Contatti</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Profilo</h2>
+            <p>Laureando in Gestione d'Impresa, indirizzo Economia Digitale, con competenze in analisi dati finanziari, trading e programmazione MQL4 e Python.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nicola Chimenti</p>
+    </footer>
+</body>
+</html>

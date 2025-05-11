@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - [Il Tuo Nome]</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">Chi sono</a>
+            <a href="{{ url_for('services') }}">Servizi</a>
+            <a href="{{ url_for('contact') }}">Contatti</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Dashboard Interattiva</h2>
+            <p>Visualizza la mia dashboard per l'analisi dei dati finanziari.</p>
+            <a href="{{ url_for('dashboard_index') }}">Accedi alla Dashboard</a>
+        </section>
+        <section>
+            <h2>Altri Progetti</h2>
+            <ul>
+                <li>Script Python per analisi di mercato</li>
+                <li>Expert Advisor per strategie di trading automatizzate</li>
+                <li>Visualizzazioni interattive con Plotly</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nicola Chimenti</p>
+    </footer>
+</body>
+</html>

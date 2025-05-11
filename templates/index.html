@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Grafico a Candele{% endblock %}
+
+{% block content %}
+<h2>Grafico a Candele da Yahoo Finance</h2>
+
+<form method="post">
+    <label for="symbol">Simbolo (es. AAPL, MSFT, VOW3.DE):</label>
+    <input type="text" id="symbol" name="symbol" required><br><br>
+
+    <label for="start_date">Data Inizio:</label>
+    <input type="date" id="start_date" name="start_date" required><br><br>
+
+    <label for="end_date">Data Fine:</label>
+    <input type="date" id="end_date" name="end_date" required><br><br>
+
+    <button type="submit">Genera Grafico</button>
+</form>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+
+{% if plot_div %}
+    <h3>Grafico:</h3>
+    {{ plot_div|safe }}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      display: flex;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .block {
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .block.indicator { background-color: #2ecc71; }
+    .block.condition { background-color: #e74c3c; }
+    .block.entry { background-color: #9b59b6; }
+    .block.exit { background-color: #f39c12; }
+
+    .workspace {
+      min-height: 500px;
+      border: 2px dashed #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .strategy-block {
+      display: flex;
+      align-items: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .connector {
+      width: 20px;
+      height: 20px;
+      background-color: #3498db;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+    .save-btn {
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    h2 { color: #2c3e50; }
+    h3 { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Componenti</h3>
+      <p>Trascina e rilascia gli elementi</p>
+
+      <h4>Indicatori</h4>
+      <div class="block indicator">Media Mobile Semplice</div>
+      <div class="block indicator">RSI</div>
+      <div class="block indicator">MACD</div>
+      <div class="block indicator">Bande di Bollinger</div>
+
+      <h4>Condizioni</h4>
+      <div class="block condition">Prezzo > Valore</div>
+      <div class="block condition">Indicatore > Valore</div>
+      <div class="block condition">Incrocio Indicatori</div>
+
+      <h4>Azioni</h4>
+      <div class="block entry">Compra</div>
+      <div class="block exit">Vendi</div>
+      <div class="block">Stop Loss</div>
+      <div class="block">Take Profit</div>
+    </div>
+
+    <div class="main-content">
+      <h2>Creatore di Strategie</h2>
+      <p>Costruisci la tua strategia di trading personalizzata</p>
+
+      <div class="workspace">
+        <h4>La tua strategia</h4>
+        <!-- Esempio di strategia costruita -->
+        <div class="strategy-block">
+          <span>SE</span>
+          <div class="block indicator">Media Mobile 50</div>
+          <span class="connector"></span>
+          <div class="block condition">Incrocia verso l'alto</div>
+          <span class="connector"></span>
+          <div class="block indicator">Media Mobile 200</div>
+        </div>
+
+        <div class="strategy-block">
+          <span>ALLORA</span>
+          <div class="block entry">Compra</div>
+          <span>con</span>
+          <div class="block">Stop Loss 2%</div>
+        </div>
+
+        <div class="strategy-block">
+          <span>SE</span>
+          <div class="block indicator">RSI</div>
+          <span class="connector"></span>
+          <div class="block condition">></div>
+          <span>70</span>
+        </div>
+
+        <div class="strategy-block">
+          <span>ALLORA</span>
+          <div class="block exit">Vendi</div>
+        </div>
+      </div>
+
+      <button class="save-btn">Salva Strategia</button>
+    </div>
+  </div>
+</body>
+</html>
